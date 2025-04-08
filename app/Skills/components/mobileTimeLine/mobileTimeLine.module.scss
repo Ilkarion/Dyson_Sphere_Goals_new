@@ -1,0 +1,153 @@
+.allLine {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    width: 100vw;
+    height: 100vh;
+    gap: 25px;
+    overflow-y: auto;
+    padding-bottom: 85px;
+}
+
+.allLine > div {
+    position: relative;
+}
+
+
+.mainLine {
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color:var(--main-line-skills);
+}
+
+.connectionCircle {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    background-color: var(--main-line-skills);
+    position: relative;
+}
+
+.connectionCircle::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    position: absolute;
+    border-radius: 9999px;
+    top: 25%;
+    left: 25%;
+}
+
+.connectionLine {
+    width: 60px;
+    height: 3px;
+    background-color: var(--main-line-skills);
+    position: absolute;
+    z-index: -1;
+}
+
+.connectionElement {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillComponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    margin-top: 20px;
+}
+
+@media(width < 340px) {
+    .allLine {
+        align-items: end;
+    }
+    .mainLine {
+        margin-right: 48px;
+    }
+}
+
+@media(340px < width < 500px) {
+    .allLine {
+        align-items: end;
+    }
+    .mainLine {
+        margin-right: 65px;
+    }
+    .skillComponent {
+        margin-top: 20px;
+        margin-right: 12px;
+    }
+}
+
+@media(width > 500px) {
+    .allLine {
+        align-items: center;
+    }
+    .mainLine {
+        // margin-right: 5px;
+        // margin-left: 4px;
+    }
+    .skillComponent {
+        margin-left: 0px;
+    }
+
+}
+
+@media(width < 529px) {
+    .mainLine {
+        margin-left: 23px;
+    }
+} 
+
+@media(529px < width < 650px) {
+    .mainLine {
+        margin-right: 21px;
+    }
+}
+
+@media(width >= 650px) {
+    .mainLine {
+        margin-right: 6px;
+    }
+}
+
+@media(width >= 750px) {
+    .skillComponent {
+        margin-right: 30px;
+    }
+}
+
+@media(width >= 950px) {
+    .allLine { 
+        flex-direction: row;
+        align-items: flex-start;
+        position: absolute;
+        padding-top: 45px;
+        padding-left: 20px;
+        overflow-y: auto;
+    }
+    .mainLine { 
+        width: 100vw;
+        height: 5px;
+        top: 143px;
+        margin-left: 0px;
+    }
+    .skillComponent {
+        transform: rotate(180deg); 
+        padding-right: 0px;
+        margin-top: 0px;
+        flex-direction: column;
+        margin-top: 19px;
+        gap: 14px;
+        min-width: 270px;
+    }
+    .connectionElement {
+        transform: rotate(90deg);
+    }
+}

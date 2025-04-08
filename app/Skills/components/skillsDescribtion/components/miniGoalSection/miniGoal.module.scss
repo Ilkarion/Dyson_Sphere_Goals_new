@@ -1,0 +1,62 @@
+.titleMiniGoal {
+    text-align: center;
+    text-decoration: underline dashed var(--main-text-skills) 0.8px;
+}
+
+.checkBoxGroup {
+    display: flex;
+    margin-top: 7px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.date,
+.date time {
+    font-size: 0.64rem;
+    color: white;
+    text-decoration: none;
+}
+
+.date {
+    text-align: center;
+    margin-top: 7px;
+}
+
+@media(width < 420px) {
+    .titleMiniGoal {
+        font-size: 0.95rem;
+    }
+    .date, .date time {
+        font-size: 0.6rem;
+    }
+}
+
+@media(width > 650px) {
+    .accordion {
+        max-width: 205px;
+    }
+    .titleMiniGoal {
+        font-size: 1.11rem;
+    }
+    .date, .date time {
+        font-size: 0.74rem;
+    }
+}
+
+@media(width > 750px) {
+    .accordion {
+        max-width: 205px;
+    }
+    .titleMiniGoal {
+        font-size: 1.11rem;
+    }
+    .date, .date time {
+        font-size: 0.84rem;
+    }
+}
+
+@media(width >= 950px) {
+    .date, .date time {
+        font-size: 0.8rem;
+    }
+}

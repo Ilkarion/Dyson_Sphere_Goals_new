@@ -1,0 +1,21 @@
+.bgTheme {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bgLinesDark {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px; /* Размер сетки */
+}
+
+.bgLinesLight {
+    background-image: radial-gradient(rgb(107, 105, 105) 2%, transparent 10%);
+    background-size: 20px 20px; /* Расстояние между точками */
+    background-position: 0 0;
+}

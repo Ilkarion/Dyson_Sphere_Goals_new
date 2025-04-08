@@ -1,0 +1,36 @@
+.alignElemts {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+  overflow: visible;
+}
+
+.alignNav {
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+@media(width < 500px) {
+  .alignElemts {
+    justify-content: end;
+  }
+}
+
+@media(width > 500px) {
+  .alignElemts {
+    justify-content: center;
+  }
+}
+
+@media(width >= 950px) {
+  .alignElemts {
+      align-items: flex-start;
+  }
+}

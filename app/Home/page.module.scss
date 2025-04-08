@@ -1,0 +1,56 @@
+.home {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.bgTheme {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.motivation {
+    font-size: 1.11rem;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    padding-top: 46px;
+}
+
+
+
+@media(width > 500px) {
+    .motivation {
+        max-width: 400px;
+    }
+}
+
+@media(width > 700px) {
+    .motivation {
+        max-width: 550px;
+        font-size: 1.5rem;
+    }
+}
+
+@media(width > 1000px) {
+    .motivation {
+        max-width: 850px;
+        font-size: 2rem;
+    }
+}
+
+@media(width > 1400px) {
+    .motivation {
+        max-width: 850px;
+        font-size: 2.5rem;
+    }
+}
+
+@media(width > 2000px) {
+    .motivation {
+        max-width: 1050px;
+        font-size: 3rem;
+    }
+}

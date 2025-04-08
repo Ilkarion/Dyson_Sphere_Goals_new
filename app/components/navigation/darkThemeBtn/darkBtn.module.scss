@@ -1,0 +1,17 @@
+.darkBtnActive {
+    background-color: var(--navigation-dark-btn);
+}
+
+.darkBtn {
+    background-color: transparent;
+}
+
+.darkBtnEf:hover {
+    transition: all 0.1s ease;
+    transform: scale(1.2);
+}
+
+.darkBtnEf:active {
+    transition: all 0.01s ease;
+    transform: scale(1);
+}

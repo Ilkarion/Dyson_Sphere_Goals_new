@@ -1,0 +1,40 @@
+.navigation {
+    top: 196px;
+    left: 0px;
+    position: absolute;
+    padding: 8px 7px;
+    background-color: var(--navigation-panel);
+    backdrop-filter: blur(35px);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.guideSkills,
+.lightDarkOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--navigation-sections);
+    padding: 8px 7px;
+}
+
+.guideSkills > div,
+.lightDarkOption > div {
+    width: 35px;
+    height: 35px;
+    background-color: var(--navigation-options);
+}
+
+.guideSkills > div > a > img,
+.lightDarkOption > div > img {
+    width: 100%;
+    height: 100%;
+}
+
+@media(height < 430px) {
+    .navigation {
+        top: 60px;
+    }
+}

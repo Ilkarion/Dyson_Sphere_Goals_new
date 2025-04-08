@@ -1,0 +1,98 @@
+.skillProgress {
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg);
+    margin-left: 14px;
+    padding: 7px 12px;
+    border-radius: 9999px;
+    border: 1px solid var(--progress-text-skills);
+}
+
+.mobileSkillProgress {
+    width: 25px;
+    height: 25px;
+}
+
+.progressTitle {
+    color: var(--progress-text-skills);
+    font-size: 0.83rem;
+    text-align: center;
+}
+
+
+.inProgressBg {
+    background-color: var(--inProgress-bg-skills);
+}
+
+.completedBg {
+    background-color: var(--completed-bg-skills);
+}
+
+.unfinishedBg {
+    background-color: var(--unfinished-bg-skills);
+}
+
+.notStartedBg {
+    background-color: var(--notStarted-bg-skills);
+}
+
+@media(width < 340px) {
+    .mobileSkillProgress {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+
+@media(width < 500px) {
+    .skillProgress {
+        display: none;
+    }
+    .mobileSkillProgress {
+        display: flex;
+        padding: 0px;
+    }
+    .progressTitle {
+        display: none;
+    }
+    .progressTitle > span {
+        display: none;
+    }
+}   
+
+@media(width >= 500px) {
+    .skillProgress {
+        margin-left: 15px;
+    }
+
+    .progressTitle {
+        font-size: 1.11rem;
+    }
+
+    .mobileSkillProgress {
+        display: none;
+
+    }
+    .skillProgress {
+        display: flex;
+        transform: rotate(0deg);
+        margin-left: 14px;
+        width: 250px;
+        padding: 7px 12px;
+        height: auto;
+    }
+}
+
+@media(500px < width < 529px) {
+    .skillProgress {
+        width: 200px;
+    }
+}   
+
+@media(width >= 950px) {
+    .skillProgress {
+        transform: rotate(180deg);
+        margin-left: 0px;
+    }
+}

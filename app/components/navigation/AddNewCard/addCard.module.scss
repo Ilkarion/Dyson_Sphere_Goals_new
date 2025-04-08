@@ -1,0 +1,48 @@
+.addCard:hover {
+    cursor: pointer;
+    background-color: var(--navigation-panel);
+}
+
+.addCard {
+    background-color: var(--navigation-options)
+}
+
+.goalAdd {
+    display: flex;
+    gap: 4px;
+
+    & > button {
+        padding: 2px;
+    }
+}
+
+.cardCreatorMenu {
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+    background-color: var(--navigation-options)
+}
+
+.cardCreatorMenu > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.addStage {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.addStageInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pAddBtn {
+    padding: 2px;
+}

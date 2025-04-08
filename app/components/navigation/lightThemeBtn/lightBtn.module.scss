@@ -1,0 +1,17 @@
+.lightBtnActive {
+    background-color: var(--navigation-light-btn);
+}
+
+.lightBtn {
+    background-color: transparent;
+}
+
+.lightBtnEf:hover {
+    transition: all 0.1s ease;
+    transform: scale(1.2);
+}
+
+.lightBtnEf:active {
+    transition: all 0.01s ease;
+    transform: scale(1);
+}

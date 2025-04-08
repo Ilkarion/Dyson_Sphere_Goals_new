@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { createClient } from "@/utils/supabase/server";
+import style from "@/components/styles/header-auth.module.scss"
 
 export default async function AuthButton() {
   const supabase = await createClient();
@@ -15,22 +16,21 @@ export default async function AuthButton() {
   if (!hasEnvVars) {
     return (
       <>
-        <div className="flex gap-4 items-center">
+        <div>
           <div>
             <Badge
               variant={"default"}
-              className="font-normal pointer-events-none"
             >
               Please update .env.local file with anon key and url
             </Badge>
           </div>
-          <div className="flex gap-2">
+          <div>
             <Button
               asChild
               size="sm"
               variant={"outline"}
               disabled
-              className="opacity-75 cursor-none pointer-events-none"
+              
             >
               <Link href="/sign-in">Sign in</Link>
             </Button>
@@ -39,7 +39,6 @@ export default async function AuthButton() {
               size="sm"
               variant={"default"}
               disabled
-              className="opacity-75 cursor-none pointer-events-none"
             >
               <Link href="/sign-up">Sign up</Link>
             </Button>
@@ -49,20 +48,20 @@ export default async function AuthButton() {
     );
   }
   return user ? (
-    <div className="flex items-center gap-4">
-      Hey, {user.email}!
+    <div className="successUser">
+      <span>{user.email}</span>
       <form action={signOutAction}>
-        <Button type="submit" variant={"outline"}>
-          Sign out
+        <Button type="submit" variant={"outline"} className="successBtn">
+          <span>Sign out</span>
         </Button>
       </form>
     </div>
   ) : (
-    <div className="flex gap-2">
-      <Button asChild size="sm" variant={"outline"}>
+    <div className={style.regBtns}>
+      <Button asChild size="sm" variant={"outline"} className={style.signInReg}>
         <Link href="/sign-in">Sign in</Link>
       </Button>
-      <Button asChild size="sm" variant={"default"}>
+      <Button asChild size="sm" variant={"default"} className={style.signInReg}>
         <Link href="/sign-up">Sign up</Link>
       </Button>
     </div>

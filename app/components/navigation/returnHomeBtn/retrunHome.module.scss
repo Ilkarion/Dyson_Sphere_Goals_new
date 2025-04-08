@@ -1,0 +1,8 @@
+.navigBtn:hover {
+    transition: all 0.01s ease;
+    background-color: var(--navigation-panel);
+}
+
+.navigBtn:active {
+    background-color:transparent;
+}

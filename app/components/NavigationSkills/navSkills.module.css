@@ -1,0 +1,9 @@
+.changePosition {
+    position: relative;
+    transform: rotate(90deg);
+    top: 0px;
+}
+
+.rotateLogo {
+    transform: rotate(-90deg);
+}
